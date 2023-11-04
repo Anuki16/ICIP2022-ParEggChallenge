@@ -1,6 +1,6 @@
 dataset_type = 'CocoDataset'
-data_root = 'Chula-ParasiteEgg-11/'#main folder with the data, change according to your filesystem
-split_root = 'Chula-ParasiteEgg-11/5-fold-train-val/fold-0/' #folder with COCO json file (val and train split)
+data_root = '/home/anuki/ICIP2022-ParEggChallenge/sliced_data/sliced_data/cut_960x1280/'#main folder with the data, change according to your filesystem
+split_root = '/home/anuki/ICIP2022-ParEggChallenge/5-fold/fold-0/' #folder with COCO json file (val and train split)
 classes = ('Ascaris lumbricoides', 'Capillaria philippinensis', 'Enterobius vermicularis', 'Fasciolopsis buski',
            'Hookworm egg', 'Hymenolepis diminuta', 'Hymenolepis nana', 'Opisthorchis viverrine',
            'Paragonimus spp', 'Taenia spp. egg', 'Trichuris trichiura')
@@ -36,19 +36,19 @@ data = dict(
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
-        ann_file=split_root + 'train.json',
+        ann_file=split_root + 'cut_960x1280_train.json',
         img_prefix=data_root,
         classes=classes,
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
-        ann_file=split_root + 'val.json',
+        ann_file=split_root + 'cut_960x1280_val.json',
         img_prefix=data_root,
         classes=classes,
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=split_root + 'val.json',
+        ann_file=split_root + 'cut_960x1280_val.json',
         img_prefix=data_root,
         classes=classes,
         pipeline=test_pipeline))

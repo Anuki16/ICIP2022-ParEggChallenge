@@ -1,0 +1,13 @@
+mmdetection/
+sahi/
+Chula-ParasiteEgg-11/Chula-ParasiteEgg-11/data/
+test/data/
+inference/mod-val.json
+sliced_data/
+*.pth
+!models/*.pth
+cuda-repo-ubuntu2004-12-3-local_12.3.0-545.23.06-1_amd64.deb
+nohup.out
+wget-log*
+work_dirs/*
+!work_dirs/basic_config/

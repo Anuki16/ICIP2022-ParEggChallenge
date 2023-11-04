@@ -1,7 +1,7 @@
 _base_ = [
-    'configs/parasiteEgg/parasiteEgg.py',
-    'configs/_base_/schedules/schedule_2x.py',
-    'configs/_base_/default_runtime.py'
+    'parasiteEgg.py',
+    '_base_/schedules/schedule_2x.py',
+    '_base_/default_runtime.py'
 ]
 model = dict(
     type='TOOD',
@@ -69,4 +69,4 @@ model = dict(
         nms=dict(type='nms', iou_threshold=0.6),
         max_per_img=100))
 # working diretory
-work_dir = 'models/TOOD_r50/fold-0/'
+work_dir = 'work_dirs/TOOD_r50/fold-0/'

@@ -1,7 +1,7 @@
 import os
 from sahi.predict import predict
 
-model_path='models/FasterRCNN-r50-train-val/'
+model_path='/home/anuki/ICIP2022-ParEggChallenge/work_dirs/basic_config/best_coco_bbox_mAP_epoch_10.pth'
 image_dir = 'Chula-ParasiteEgg-11/test/data/'
 dataset_json = 'Chula-ParasiteEgg-11/test/test.json'
 slice_width = 1280
